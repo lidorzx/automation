@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks: 
+
+  - name: update repo
+    yum:
+      update_cache: yes
+
+  - name: install httpd
+    yum:
+      name: httpd
